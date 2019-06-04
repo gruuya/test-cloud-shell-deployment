@@ -1,0 +1,19 @@
+imports:
+- path: editor_role.py
+
+resources:
+- name: create-byo-service-account
+  type: iam.v1.serviceAccount
+  properties:
+    accountId: frame-byo-workload
+    displayName: "frame-byo-workload"
+  accessControl:
+    gcpIamPolicy:
+      bindings:
+      - role: roles/iam.serviceAccountTokenCreator
+        members:
+        - "serviceAccount:1018189488659-compute@developer.gserviceaccount.com"
+- name: attach-edit-role
+  type: editor_role.py
+  properties:
+    serviceAccountEmail: $(ref.create-byo-service-account.email)
