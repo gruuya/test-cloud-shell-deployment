@@ -5,7 +5,7 @@ def generate_config(context):
         "roles/compute.securityAdmin",
         "roles/compute.storageAdmin",
         "roles/dns.admin",
-        "roles/iam.serviceAccountKeyAdmin"  # for fixed credentials only
+        "roles/iam.serviceAccountKeyAdmin",  # for fixed credentials only
         "roles/iam.serviceAccountTokenCreator",  # for temp credentials only
         "roles/iam.serviceAccountUser"  # for temp credentials only
         ]
@@ -13,7 +13,7 @@ def generate_config(context):
     resources = []
     for role in roles_to_attach:
         resources.append({
-            "name": "Frame Workload" + role,
+            "name": "Frame Workload " + role,
             "type": "gcp-types/cloudresourcemanager-v1:virtual.projects.iamMemberBinding",
             "properties": {
                 "resource": context.env["project"],
