@@ -13,7 +13,7 @@ def generate_config(context):
     resources = []
     for role in roles_to_attach:
         resources.append({
-            "name": "attach-edit-role",
+            "name": "Frame Workload" + role,
             "type": "gcp-types/cloudresourcemanager-v1:virtual.projects.iamMemberBinding",
             "properties": {
                 "resource": context.env["project"],
