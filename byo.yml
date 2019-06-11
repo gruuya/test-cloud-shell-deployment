@@ -1,5 +1,5 @@
 imports:
-- path: editor_role.py
+- path: attach_roles.py
 
 resources:
 - name: create-byo-service-account
@@ -13,7 +13,7 @@ resources:
       - role: roles/iam.serviceAccountTokenCreator
         members:
         - "serviceAccount:1018189488659-compute@developer.gserviceaccount.com"
-- name: attach-edit-role
-  type: editor_role.py
+- name: attach-roles
+  type: attach_roles.py
   properties:
     serviceAccountEmail: $(ref.create-byo-service-account.email)
