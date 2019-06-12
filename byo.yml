@@ -1,2 +1,3 @@
+resources:
 - name: attach-roles
   type: attach_roles.py
