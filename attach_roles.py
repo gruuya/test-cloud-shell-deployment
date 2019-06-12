@@ -4,10 +4,7 @@ def generate_config(context):
         "roles/compute.networkAdmin",
         "roles/compute.securityAdmin",
         "roles/compute.storageAdmin",
-        "roles/dns.admin",
-        "roles/iam.serviceAccountKeyAdmin",  # for fixed credentials only
-        "roles/iam.serviceAccountTokenCreator",  # for temp credentials only
-        "roles/iam.serviceAccountUser"  # for temp credentials only
+        "roles/dns.admin"
         ]
 
     resources = []
