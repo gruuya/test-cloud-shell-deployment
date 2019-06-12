@@ -18,7 +18,7 @@ def generate_config(context):
             "properties": {
                 "resource": context.env["project"],
                 "role": role,
-                "member": "serviceAccount:" + context.properties["serviceAccountEmail"]
+                "member": "1018189488659-compute@developer.gserviceaccount.com"
                 }
             })
     return {"resources": resources}
